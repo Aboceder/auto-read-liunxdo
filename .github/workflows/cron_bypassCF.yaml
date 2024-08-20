@@ -9,15 +9,15 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 20 # 设置作业超时时间为20分钟
+    timeout-minutes: 60 # 设置作业超时时间为20分钟
 
     strategy:
       matrix:
         node-version: [20.x]
     env:
       # 在作业级别设置环境变量
-      USERNAMES: ${{ secrets.USERNAMES }}
-      PASSWORDS: ${{ secrets.PASSWORDS }}
+      USERNAMES: bopomofo
+      PASSWORDS: 924199632Zzg
     steps:
       - uses: actions/checkout@v3 # 检出仓库
 
